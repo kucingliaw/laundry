@@ -15,11 +15,11 @@
 <body style="background: #f0f0f0">
     <!-- cek apakah sudah login -->
     <?php
-session_start();
-if ($_SESSION['status'] != "login") {
-    header("location:../index.php?pesan=belum_login");
-}
-?>
+    session_start();
+    if ($_SESSION['status'] != "login") {
+        header("location:../index.php?pesan=belum_login");
+    }
+    ?>
     <!-- menu navigasi -->
     <nav class="navbar navbar-inverse" style="border-radius: 0px">
         <div class="container-fluid">
@@ -44,8 +44,10 @@ if ($_SESSION['status'] != "login") {
                             aria-expanded="false"><i class="glyphicon glyphicon-wrench"></i> Pengaturan <span
                                 class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="harga.php"><i class="glyphicon glyphicon-usd"></i> Pengaturan Harga</a></li>
-                            <li><a href="ganti_password.php"><i class="glyphicon glyphicon-lock"></i> Ganti Password</a>
+                            <li><a href="harga.php"><i class="glyphicon glyphicon-usd"></i> Pengaturan Harga</a>
+                            </li>
+                            <li><a href="ganti_password.php"><i class="glyphicon glyphicon-lock my-2"></i> Ganti
+                                    Password</a>
                             </li>
                         </ul>
                     </li>

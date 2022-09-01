@@ -1,4 +1,4 @@
-<?php include 'header.php';?>
+<?php include 'header.php'; ?>
 <div class="container">
     <br />
     <br />
@@ -10,13 +10,13 @@
             </div>
             <div class="panel-body">
                 <?php
-// menghubungkan koneksi
-include '../koneksi.php';
+                // menghubungkan koneksi
+                include '../koneksi.php';
 
-// megambil data haraga per kilo dari tabel harga
-$data = mysqli_query($koneksi, "select harga_per_kilo from harga");
-while ($d = mysqli_fetch_array($data)) {
-    ?>
+                // megambil data haraga per kilo dari tabel harga
+                $data = mysqli_query($koneksi, "select harga_per_kilo from harga");
+                while ($d = mysqli_fetch_array($data)) {
+                ?>
                 <form method="post" action="harga_update.php">
                     <div class="form-group">
                         <label>Harga per kilo</label>
@@ -27,11 +27,10 @@ while ($d = mysqli_fetch_array($data)) {
                     <input type="submit" class="btn btn-primary" value="Ubah Harga">
                 </form>
                 <?php
-}
-?>
+                }
+                ?>
             </div>
         </div>
-        287
     </div>
 </div>
-<?php include 'footer.php';?>
+<?php include 'footer.php'; ?>
